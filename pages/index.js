@@ -28,7 +28,11 @@ const Home = ({ posts }) => (
     </div>
     {posts.map(post => (
       <div className="blog">
-        <h2 className="blog-title"></h2>
+        <h2 className="blog-title">
+          <Link href={post.slug}>
+            <a className="blog-title-link">{post.title}</a>
+          </Link>
+        </h2>
       </div>
     ))}
 
