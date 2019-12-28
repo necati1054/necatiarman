@@ -76,6 +76,8 @@ const Home = ({ posts }) => (
       }
       .blog{
         background-color: red;
+        max-width: 650px;
+        text-align: center;
       }
     `}</style>
   </div>
