@@ -28,7 +28,6 @@ const Home = ({ posts }) => (
     </div>
     <style jsx>{`
       .container {
-        width: 100%;
         margin: 0 auto;
         font-family: 'Indie Flower', cursive;
         background-color:#ebc8b2;
@@ -45,26 +44,9 @@ const Home = ({ posts }) => (
       .hero-title {
         font-size: 48px;
       }
-      .blog-date {
-        text-align: right;
-        color: red;
-        padding: 0 5px 5px 0;
-      }
       a {
         color: #ff6200;
         text-decoration: none;
-      }
-      .blog{
-        background-color:#e5b79a;
-        border-radius:15px;
-        max-width: 650px;
-        margin: auto;
-      }
-      .blog-title{
-        padding: 5px 0 0 5px;
-      }
-      .blog-text{
-        padding: 0 0 0 5px;
       }
       .hakkında{
         weight:auto;
