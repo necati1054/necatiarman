@@ -26,6 +26,20 @@ const Home = ({ posts }) => (
         </div>
       </div>
     </div>
+    {posts.map(post => (
+      <div className="blog">
+        <h2 className="blog-title">
+          <Link href={post.slug}>
+            <a className="blog-title-link">{post.title}</a>
+          </Link>
+        </h2>
+        <div className="blog-text">
+          <ReactMarkdown source={post.details} />
+        </div>
+        <div className="blog-date">{post.date}</div>
+      </div>
+    ))}
+
     <style jsx>{`
       .container {
         margin: 0 auto;
@@ -59,6 +73,9 @@ const Home = ({ posts }) => (
       .hakkındayazı{
         text-align: center;
         color: black;
+      }
+      .blog{
+        background-color: red;
       }
     `}</style>
   </div>
