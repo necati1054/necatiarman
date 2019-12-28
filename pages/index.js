@@ -42,7 +42,6 @@ const Home = ({ posts }) => (
       }
       .hero-title {
         font-size: 48px;
-        height: 450px;
       }
       a {
         color: #ff6200;
