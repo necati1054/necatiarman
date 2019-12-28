@@ -38,7 +38,6 @@ const Home = ({ posts }) => (
 
     <style jsx>{`
       .container {
-        margin: 0 auto;
         font-family: 'Indie Flower', cursive;
         background-color:#ebc8b2;
       }
