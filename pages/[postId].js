@@ -4,14 +4,14 @@ import Head from "next/head";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
-const Home = ({ posts }) => (
+const BlogPost = ({ post }) => (
   <div className="container">
     <Head>
-      <title>Necati Arman Blog</title>
+      <title>Home</title>
       <link rel="icon" href="/favicon.ico" />
       <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"/>
       <script data-ad-client="ca-pub-2037585543989384" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    </Head> 
+    </Head>
     <div className="hero">
       <h1 className="hero-title">Necati ARMAN</h1>
       <div className="hero-social-links">
@@ -21,85 +21,75 @@ const Home = ({ posts }) => (
         <Link href="https://www.facebook.com/profile.php?id=100003946455226">
           <a className="social-link">facebook</a>
         </Link>
-        <div className="hakkında">            
-          <a href="/about" className="hakkındayazı">Hakkında</a>
-        </div>
       </div>
     </div>
-    {posts.map(post => (
-      <div className="blog">
-        <h2 className="blog-title">
-          <Link href={post.slug}>
-            <a className="blog-title-link">{post.title}</a>
-          </Link>
-        </h2>
-        <div className="blog-text">
-          <ReactMarkdown source={post.details} />
-        </div>
-        <div className="blog-date">{post.date}</div>
-      </div>
-    ))}
 
+    <div className="blog">
+      <h2 className="blog-title">
+        <Link href="/test">
+          <a className="blog-title-link">{post.title}</a>
+        </Link>
+      </h2>
+      <div className="blog-text">
+        <ReactMarkdown source={post.details} />
+      </div>
+      <div className="blog-date">{post.date}</div>
+    </div>
     <style jsx>{`
       .container {
+        max-width: 650px;
         width: 100%;
         margin: 0 auto;
         font-family: 'Indie Flower', cursive;
-        background-color:#ebc8b2;
       }
-      .hero{
+
+      .hero {
         text-align: center;
         margin -20px 0 0 0 ;
-        background-color: #808080;
       }
+
       .social-link {
         margin-right: 8px;
-        color:black;
       }
+
       .hero-title {
         font-size: 48px;
       }
+
       .blog-date {
         text-align: right;
         color: red;
+        margin 12px 0 48px 0;
         padding: 0 5px 5px 0;
       }
+
       a {
-        color: #ff6200;
+        color: #35459e;
         text-decoration: none;
       }
       .blog{
         background-color:#e5b79a;
         border-radius:15px;
-        max-width: 650px;
-        margin: auto;
+      }
+      .blog-text{
+        padding: 0 0 0 10px;
       }
       .blog-title{
         padding: 5px 0 0 5px;
       }
-      .blog-text{
-        padding: 0 0 0 5px;
-      }
-      .hakkında{
-        weight:auto;
-        height:40px;
-        background-color: #e5b79a;
-        border-radius: 8px;
-        max-width: 650px;
-        margin: auto;
-      }
-      .hakkındayazı{
-        text-align: center;
-        color: black;
-      }
     `}</style>
   </div>
 );
-Home.getInitialProps = async ({ req }) => {
+<script>
+{
+  //document.body.style.backgroundImage="url('yeni.jpg')"
+}
+</script>
+BlogPost.getInitialProps = async ({ req, query }) => {
   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
-  const res = await fetch("http://necatiarman.herokuapp.com/api/posts");
+  const res = await fetch(`http://necatiarman.herokuapp.com/api/post/${query.postId}`);
   const json = await res.json();
-  return { posts: json.posts };
+  return { post: json.post };
 };
 
-export default Home;
+export default BlogPost;
