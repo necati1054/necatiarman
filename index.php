@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scala=1">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="logo2.ico">
     <meta charset="UTF-8">
     <title>Necati ARMAN</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,7 +13,7 @@
                 <a href="https://www.facebook.com/profile.php?id=100003946455226" target="_blank" class="fa fa-facebook"></a>
                 <a href="https://www.instagram.com/necati_arman_offical/" target="_blank" class="fa fa-instagram"></a><br>
                 <hr class="cizgi"></hr>
-                <a href="http://necatiarmanblog.herokuapp.com" class="blog">BlogSitesi</a>
+                <a href="http://necatiarmanblog.herokuapp.com" class="blog">Blog'a Git</a>
     </div>
     <style type="text/css" rel="stylesheet">
      body{
@@ -31,9 +30,19 @@
          font-size: 24px;
          margin: 0 0 -20px 0 ;
      }
+     .blog:hover{      
+      color: #fff;
+      box-shadow:
+      0 0 60px 20px #fff,
+      0 0 100px 20px #f0f,
+      0 0 140px 20px #0ff;
+      }
+
+     }
      .cizgi{
         width: 15%;
-    }
+        transition: .5s;
+     }
      .fa {
         margin: auto;
         padding: 20px;
@@ -42,7 +51,7 @@
         text-align: center;
         text-decoration: none;
         color: white;
-    }
+     }
     .fa-instagram {
         padding: 20px;
         font-size: 30px;
@@ -50,11 +59,11 @@
         text-align: center;
         text-decoration: none;
         color: white;
-    }
+     }
     .blog{
         color: white;
         text-decoration:none;
-    }
+     }
     </style>
 </body>
 </html>
