@@ -30,18 +30,16 @@
          font-size: 24px;
          margin: 0 0 -20px 0 ;
      }
-     .blog:hover{      
-      color: #fff;
-      box-shadow:
-      0 0 60px 20px #fff,
-      0 0 100px 20px #f0f,
-      0 0 140px 20px #0ff;
-      }
-
+     .blog:hover{
+        border-radius:5px;
+        color: #fff;
+        box-shadow:
+        0 0 60px 20px #fff,
+        0 0 100px 20px #f0f,
+        0 0 140px 20px #0ff;
      }
      .cizgi{
         width: 15%;
-        transition: .5s;
      }
      .fa {
         margin: auto;
@@ -63,6 +61,22 @@
     .blog{
         color: white;
         text-decoration:none;
+     }
+     .fa:hover{
+        border-radius:15px;
+        color: #fff;
+        box-shadow:
+        0 0 60px 20px #fff,
+        0 0 100px 20px #f0f,
+        0 0 140px 20px #0ff;
+     }
+     .fa-instagram:hover{
+        border-radius:15px;
+        color: #fff;
+        box-shadow:
+        0 0 60px 20px #fff,
+        0 0 100px 20px #f0f,
+        0 0 140px 20px #0ff;
      }
     </style>
 </body>
